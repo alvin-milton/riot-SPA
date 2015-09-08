@@ -1,0 +1,49 @@
+@mixin reset() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin default-component-margin() {
+  margin: 10px 0;
+  padding: 0;
+}
+
+$font: "Hoefler Text", Baskerville, Garamond, "Palatino Linotype", Georgia, "Times New Roman", serif;
+
+* {
+  @include reset();
+  font-family: $font
+}
+
+h1,
+h2,
+h3 {
+}
+
+header,
+img,
+ ul,
+.content {
+  @include default-component-margin();
+}
+
+.nav {
+  background-color: #eee;
+  text-decoration: initial;
+  &:hover {
+    background-color: #ccc;
+    color: #fff;
+  }
+}
+
+a {
+  padding: 10px;
+}
+
+header {
+  margin: 50px;
+}
+
+.content {
+  margin: 50px;
+}

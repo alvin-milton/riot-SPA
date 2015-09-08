@@ -1,0 +1,53 @@
+<head>
+  <site-meta></site-meta>
+</head>
+
+<div class="container">
+  <page-header></page-header>
+  <top-menu></top-menu>
+  <content></content>
+  <built-with></built-with>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/riot/2.2.4/riot+compiler.min.js"></script>
+
+<script src="tags/site-meta.tag" type="riot/tag"></script>
+<script src="tags/page-header.tag" type="riot/tag"></script>
+<script src="tags/top-menu.tag" type="riot/tag"></script>
+<script src="tags/built-with.tag" type="riot/tag"></script>
+<script src="tags/content.tag" type="riot/tag"></script>
+
+<script>
+  // mounts all components
+  // riot.mount('*')
+
+  // mounts specific components
+  riot.mount('site-meta, page-header, top-menu, built-with')
+
+  function loadContent () {
+    switch(window.location.hash) {
+      case '#contact':
+        riot.mount('content', {
+          content: 'contact'
+        });
+        break;
+      case '#work':
+        riot.mount('content', {
+          content: 'work'
+        });
+        break;
+      case '#about':
+        riot.mount('content', {
+          content: 'about'
+        });
+        break;
+      default:
+        riot.mount('content', {
+          content: 'writings'
+        });
+    }
+  }
+  window.onhashchange = loadContent
+  loadContent()
+
+</script>
