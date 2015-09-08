@@ -6,6 +6,7 @@ SPA in riotJS
 Why? Because minimalism.
 
 **features**
+- No dependencies on Jquery, templating systems, or other to work
 - Component everything
 - Router
 - ReactJS-like syntax w/o JSX 
@@ -14,7 +15,7 @@ Why? Because minimalism.
 - Syntax is a pleasure to write, way cleaner than ReactJS
 - Virtual Dom
 - LifeCycle events on component
-- Tags can be rendered server-side
+- Tags can be rendered server-side (nodeJS)
 - Can use any preprocessor (Coffeescript, ES6, etc)
 - Faster to parse, cheaper to download as far as payload
 - Vanilla JS!!!
