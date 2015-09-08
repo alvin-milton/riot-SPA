@@ -1,7 +1,7 @@
 SPA in riotJS
 =============
 
-[riotJS](http://riotjs.com/http://riotjs.com/) is pretty amaze
+[Riot.js](http://riotjs.com/) is pretty amaze
 
 Why? Because minimalism.
 
