@@ -3,7 +3,9 @@
   <style>
     li {
       list-style-type: none;
-      display: inline;
+      display: inline-block;
+      padding: 10px;
+      background-color: #eee;
     }
   </style>
 

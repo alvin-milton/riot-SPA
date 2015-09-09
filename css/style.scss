@@ -12,12 +12,12 @@ $font: "Hoefler Text", Baskerville, Garamond, "Palatino Linotype", Georgia, "Tim
 
 * {
   @include reset();
-  font-family: $font
 }
 
 h1,
 h2,
 h3 {
+  font-family: $font
 }
 
 header,
@@ -28,22 +28,26 @@ img,
 }
 
 .nav {
+}
+
+li {
   background-color: #eee;
-  text-decoration: initial;
   &:hover {
     background-color: #ccc;
-    color: #fff;
+    a {
+      color: #fff;
+    }
   }
 }
 
 a {
-  padding: 10px;
+  &:hover {
+    text-decoration: initial;
+  }
 }
 
 header {
-  margin: 50px;
 }
 
 .content {
-  margin: 50px;
 }
