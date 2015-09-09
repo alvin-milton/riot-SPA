@@ -1,2 +1,3 @@
 .sass*
 css/*.css*
+node_modules/
