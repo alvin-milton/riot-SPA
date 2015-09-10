@@ -1,4 +1,4 @@
-module.exports = function (grunt) {
+module.exports = function(grunt) {
     'use strict';
     // Project configuration
     grunt.initConfig({
@@ -11,6 +11,10 @@ module.exports = function (grunt) {
             ' Licensed <%= props.license %> */\n',
         // Task configuration
         sass: {
+            options: {
+                sourcemap: 'auto',
+                style: 'compressed'   
+            },
             dist: {
                 files: [{
                     expand: true,
@@ -21,30 +25,37 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        riot: {
+            options: {
+                concat: true
+            },
+            'js/main.js': 'tags/*.tag'
+        },
         'http-server': {
             root: 'index.html',
             port: 8282,
             host: "127.0.0.1",
             cache: 10,
-            showDir : true,
+            showDir: true,
             autoIndex: true,
             ext: "html",
-            runInBackground: true|false,
+            runInBackground: true | false,
             cors: true,
             // logFn: requestLogger,
             https: {
                 cert: "<file>",
-                key:  "<file>"
+                key: "<file>"
             }
         }
     });
 
-    
+
     // These plugins provide necessary tasks
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-http-server');
+    grunt.loadNpmTasks('grunt-riot');
 
     // Default task
-    grunt.registerTask('default', ['sass', 'http-server']);
+    grunt.registerTask('compile', ['sass', 'riot']);
+    grunt.registerTask('serve', ['http-server']);
 };
-
