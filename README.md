@@ -31,7 +31,12 @@ $ npm i
 
 Tab B:
 ```sh
-$ grunt
+$ grunt compile (continue to run compile or add watch)
+```
+
+Tab C:
+```sh
+$ grunt serve
 ```
 
 ### Todos
