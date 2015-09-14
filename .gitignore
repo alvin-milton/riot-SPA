@@ -2,4 +2,4 @@
 css/*.css*
 node_modules/
 *.log
-js/*.js
+*.js
